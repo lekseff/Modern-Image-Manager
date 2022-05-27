@@ -22,10 +22,19 @@ export default class Gallery {
     this.collection.addEventListener('click', Gallery.remove);
   }
 
+  /**
+   * Создаем возможность DnD, проверка, что  элемент на зоной сбрасывания
+   * @param {*} event - event
+   */
   dragOvHandler(event) {
     event.preventDefault();
   }
 
+  /**
+   * Обработка drop файла
+   * @param {*} event - event
+   * @returns - выходим если файл не изображение
+   */
   dropHandler(event) {
     event.preventDefault();
     const file = Array.from(event.dataTransfer.files)[0];
@@ -35,6 +44,11 @@ export default class Gallery {
     this.showImages(prevUrl);
   }
 
+  /**
+   * Обработка события выбора файла
+   * @param {*} event - event
+   * @returns - выходим если файл не изображение
+   */
   fileOnLoad(event) {
     event.preventDefault();
     const file = Array.from(event.currentTarget.files)[0];
@@ -45,11 +59,20 @@ export default class Gallery {
     this.showImages(prevUrl);
   }
 
+  /**
+   * Обработка клика по блоку drag и передача на input
+   * @param {*} event - event
+   */
   clickHandler(event) {
     event.preventDefault();
     this.fileLoad.dispatchEvent(new MouseEvent('click'));
   }
 
+  /**
+   * Проверка загружаемого файла
+   * @param {*} file - объект file из event
+   * @returns true - не пройдена, false - пройдена
+   */
   validateFile(file) {
     if (!file.type.startsWith('image/')) {
       this.showError();
