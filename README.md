@@ -1,5 +1,5 @@
-![example workflow](https://github.com/lekseff/AHJ_3-3/actions/workflows/ci_test.yml/badge.svg)
-![example workflow](https://github.com/lekseff/AHJ_3-3/actions/workflows/deploy.yml/badge.svg)
+![example workflow](https://github.com/lekseff/Modern-Image-Manager/actions/workflows/ci_test.yml/badge.svg)
+![example workflow](https://github.com/lekseff/Modern-Image-Manager/actions/workflows/deploy.yml/badge.svg)
 
 ### Modern Image Manager* (задача со звёздочкой)
 
