@@ -1,6 +1,8 @@
 ![example workflow](https://github.com/lekseff/Modern-Image-Manager/actions/workflows/ci_test.yml/badge.svg)
 ![example workflow](https://github.com/lekseff/Modern-Image-Manager/actions/workflows/deploy.yml/badge.svg)
 
+[GitHub Pages](https://lekseff.github.io/Modern-Image-Manager/)
+
 ### Modern Image Manager* (задача со звёздочкой)
 
 Важно: эта задача не является обязательной. Её (не)выполнение не влияет на получение зачёта по ДЗ.
