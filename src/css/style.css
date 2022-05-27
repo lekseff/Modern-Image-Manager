@@ -1,0 +1,148 @@
+* {
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: rgb(92, 92, 92);
+	background-color: rgb(66, 66, 66);
+	background-image: url('../img/bg2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 18px;
+}
+
+#form {
+	position: absolute;
+	top: -9999px;
+}
+
+
+/***********/
+
+.view {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+.view__item {
+	width: 180px;
+	padding: 10px 8px 12px;
+	position: relative;
+	background-color: white;
+	border-radius: 8px;
+	margin: 10px;
+	box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.2);
+}
+
+.view__item-images {
+	max-width: 180px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 1px 3px 4px 2px rgb(46 78 102 / 80%);
+}
+
+.view__item-images img {
+	display: block;
+	width: 100%;
+	max-height: 180px;
+	object-fit: cover;
+}
+
+.view__item-info {
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 8px;
+
+}
+
+.view__item-remove {
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	width: 26px;
+	height: 26px;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	background-image: url('../img/remove.svg');
+	transition: all 0.2s ease;
+}
+
+.view__item-remove:hover {
+	transform: rotate(90deg);
+	transition: all 0.2s ease;
+}
+
+/* ******** */
+
+.drag-zone {
+	position: relative;
+	max-width: 570px;
+	width: 100%;
+	max-height: 190px;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 0px 15px 0px rgb(1 1 1 / 47%) inset;
+	-moz-box-shadow: 0px 0px 15px 0px rgb(1 1 1 / 47%) inset;
+	box-shadow: 0px 0px 15px 0px rgb(1 1 1 / 47%) inset;
+}
+
+.drag-zone::before {
+	position: absolute;
+	content: 'Drag and Drop files here 	or Click to select';
+	font-size: 24px;
+	font-weight: 500;
+	color:rgb(66, 66, 66);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.4;
+	background-color: transparent;	
+}
+
+.error {
+	display: none;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	opacity: 0.8;
+	color: red;
+}
+
+.active {
+	display: block;
+}
